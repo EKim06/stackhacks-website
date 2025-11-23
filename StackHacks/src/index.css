@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    /* Tailwind automatically creates bg-primary, text-primary, border-primary, etc. */
+  --color-primary: #000000;   /* Black */
+  --color-accent: #feb23a; /* Gold */
+  --font-rubik: 'Rubik', sans-serif;
+}
+
+@layer base {
+    *{
+        @apply font-rubik text-primary;
+    }
+
+    h1 {
+        @apply text-4xl font-bold p-1;
+    }
+
+    h2 {
+        @apply text-3xl p-1;
+    }
+
+    h3 {
+        @apply text-2xl p-1;
+    }
+
+    p {
+        @apply italic p-1;
+    }
+
+    :link{
+        @apply text-xl p-1;
+    }
+
+    button {
+        @apply bg-accent rounded hover:brightness-95 cursor-pointer p-1 m-1;
+    }
+
+    input, textarea {
+        @apply border border-gray-300 rounded resize-none p-1 m-1;
+    }
+
+
+
+}
