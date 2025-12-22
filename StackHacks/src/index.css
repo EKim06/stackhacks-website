@@ -1,17 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @import "tailwindcss";
 
 @theme {
     /* Tailwind automatically creates bg-primary, text-primary, border-primary, etc. */
-  --color-primary: #000000;   /* Black */
+  --color-primary: #ffffff;   /* Black */
   --color-accent: #feb23a; /* Gold */
-  --font-rubik: 'Rubik', sans-serif;
+  --font-main: 'Inter', sans-serif;
 }
 
 @layer base {
+    /* Light Mode (default) */
+  :root {
+    --bg: #ffffff;
+    --text: #111111;
+    --accent: #feb23a;
+    }
+    
+    /* Dark Mode */
+    .dark {
+    --bg: #111111;
+    --text: #ffffff;
+    --accent: #feb23a; 
+    }
+
+
     *{
-        @apply font-rubik text-primary;
+        @apply font-main text-primary;
+    }
+
+    body{
+        @apply bg-black
     }
 
     h1 {
@@ -35,7 +54,7 @@
     }
 
     button {
-        @apply bg-accent rounded hover:brightness-95 cursor-pointer p-1 m-1;
+        @apply text-black bg-accent rounded hover:brightness-95 cursor-pointer p-1 m-1;
     }
 
     input, textarea {

@@ -3,33 +3,25 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='flex flex-col items-center '>
+    <div className='flex flex-col items-center'>
       
-      <div className='flex flex-row justify-center'>
-        <div className='p-1'>
-          Linked In
-        </div>
-        <div className='p-1'>
+      <div className='flex flex-row gap-2'>
+        <a href='https://www.linkedin.com/company/stackhacks/posts/?feedView=all' target="_blank" rel="noopener noreferrer" className='hover:underline text-sm'>
+          LinkedIn
+        </a>
+        <a href='https://www.instagram.com/stackhacksbu/?hl=en' target="_blank" rel="noopener noreferrer" className='hover:underline text-sm'>
           Instagram
-        </div>
-        <div className='p-1'>
+        </a>
+        <a href='https://github.com/stackhacksbu' target="_blank" rel="noopener noreferrer" className='hover:underline text-sm'>
           Github
-        </div>
+        </a>
       </div>
 
-      <div className='flex flex-row p-1 justify-center'>
-        
-        {/* Navbar elements */}
-        <div>
-          <Link to='/'>Home</Link>
-        </div>
-        <div>
-          <Link to='/about'>About</Link>
-        </div>
-        <div>
-          <Link to='/contact'>Contact</Link>
-        </div>
-        
+      <div className='flex flex-row p-1 '>
+          {/* Navbar elements */}
+          <Link className='hover:underline text-sm' to='/'>Home</Link>
+          <Link className='hover:underline text-sm' to='/about'>About</Link>
+          <Link className='hover:underline text-sm' to='/contact'>Contact</Link>
       </div>
 
     </div>
