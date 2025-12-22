@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import Projects from './pages/Projects'
 import About from './pages/About'
 import Eboard from './pages/Eboard'
 import Events from './pages/Events'
@@ -15,9 +16,10 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <div className='flex-grow'>
+      <div className='flex-grow pt-20'>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/eboard" element={<Eboard />} />
           <Route path="/events" element={<Events />} />
