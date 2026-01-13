@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div >
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+      <section className="min-h-screen flex flex-col items-center px-4 relative overflow-hidden">
         {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="pb-60 inset-0 opacity-10">
           <div className="absolute bottom-0 left-0 right-0 h-1/2">
             <svg className="w-full h-full" viewBox="0 0 1200 400" preserveAspectRatio="none">
               <path
@@ -46,23 +46,13 @@ const Home = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              to="/contact"
-              className="bg-accent text-black px-8 py-4 rounded-lg font-semibold text-lg hover:brightness-110 transition-all"
-            >
-              Create Account
-            </Link>
-            <Link
-              to="/contact"
-              className="border-2 border-accent text-accent px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent/10 transition-all"
-            >
-              Login
-            </Link>
+            <button className='btn-primary py-4 px-8'>Learn more</button>
+            <button className='btn-secondary py-4 px-8'>Contact</button>
           </div>
         </div>
 
-        {/* Features */}
-        <div className="relative z-10 mt-auto pb-8 text-center">
+        
+        {/* Features <div className="relative z-10  pb-8 text-center">
           <p className="text-accent text-sm md:text-base space-x-4 md:space-x-6">
             <span>No Membership Fees</span>
             <span></span>
@@ -74,14 +64,9 @@ const Home = () => {
             <span></span>
             <span>Hackathon Opportunities</span>
           </p>
-        </div>
-      </section>
+        </div>*/}
+      </section> 
 
-      {/* Add more sections below */}
-      
-      {/* 
-      
-      */}
 
     </div>
   )

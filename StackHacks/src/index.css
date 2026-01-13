@@ -2,59 +2,47 @@
 
 @import "tailwindcss";
 
+/* Design tokens */
 @theme {
-    /* Tailwind automatically creates bg-primary, text-primary, border-primary, etc. */
-  --color-primary: #ffffff;   /* white */
-  --color-accent: #feb23a; /* Gold */
+  --color-primary: #ffffff;
+  --color-secondary: #a2a2a2;
+  --color-accent: #feb23a;
   --color-background: #111111;
   --font-main: 'Inter', sans-serif;
 }
 
 @layer base {
-    /* Light Mode (default) */
-  :root {
-    --bg: #ffffff;
-    --text: #111111;
-    --accent: #feb23a;
-    }
-    
+  body {
+    @apply font-main text-primary bg-background;
+  }
 
-    *{
-        @apply font-main text-primary;
-    }
+  h1 { @apply text-5xl font-bold; }
+  h2 { @apply text-4xl font-semibold; }
+  h3 { @apply text-3xl font-semibold; }
 
-    body{
-        @apply bg-background;
-    }
+  p {
+    @apply text-base leading-relaxed;
+  }
 
-    h1 {
-        @apply text-6xl font-bold p-1;
-    }
+  a {
+    @apply hover:brightness-200 text-xl p-1;
+  }
+}
 
-    h2 {
-        @apply text-5xl p-1;
-    }
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+           px-4 py-2 rounded-lg text-xl m-2
+           font-medium cursor-pointer bg-accent text-black hover:brightness-90;;
+  }
 
-    h3 {
-        @apply text-4xl p-1;
-    }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center
+           px-4 py-2 rounded-lg text-xl m-2 text-secondary
+           font-medium cursor-pointer border border-secondary text-black hover:brightness-200;;
+  }
 
-    p {
-        @apply text-xl italic p-1;
-    }
-
-    :link{
-        @apply text-2xl p-1;
-    }
-
-    button {
-        @apply text-black bg-accent rounded hover:brightness-95 cursor-pointer p-1 m-1 text-2xl;
-    }
-
-    input, textarea {
-        @apply border border-gray-300 rounded resize-none p-1 m-1 text-2xl;
-    }
-
-
-
+  .input {
+    @apply border border-secondary rounded px-2 py-1 text-xl bg-transparent hover:border-gray-300;
+  }
 }

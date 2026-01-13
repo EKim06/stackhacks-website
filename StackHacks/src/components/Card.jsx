@@ -4,7 +4,7 @@ const Card = ({title, date, image, children}) => {
   return (
     <div className='border border-gray-800 rounded p-1'>
       <div className='flex flex-row '>
-        <img className='p-5 w-[30%]' src={image} alt={title}/>
+        <img className='p-5 w-[30%] h-[30%]' src={image} alt={title}/>
         <div className='flex flex-col'>
           <h2>{title}</h2>
           <h3>{date}</h3>
